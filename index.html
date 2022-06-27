@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- particles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="./app.js" defer></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Personal Bank</title>
+</head>
+
+<body>
+
+    <main class="container mx-auto absolute z-10 backdrop-blur-sm min-h-full min-w-full">
+        <h1 class="text-green-600 font-bold text-4xl uppercase underline underline-offset-2 mt-5 text-center">Personal
+            Bank</h1>
+
+        <section>
+            <article class="flex justify-center items-center gap-20">
+                <div>
+                    <h1 class="text-green-400 text-3xl font-semibold my-5">Income</h1>
+
+                    <h4 class="text-white  text-xl">Income: <span><input type="number" value="" id="income"
+                                class="w-40 bg-gray-700 pl-3 rounded-md"></span>
+                    </h4>
+                </div>
+
+                <div>
+                    <h1 class="text-green-400 text-3xl font-semibold my-5">Expenses</h1>
+
+                    <h4 class="text-white  text-xl">Food: <span><input type="number" value="" id="food"
+                                class="w-40 bg-gray-700 pl-3 rounded-md"></span>
+                    </h4>
+
+                    <h4 class="text-white  text-xl my-5">Rent: <span><input type="number" value="" id="rent"
+                                class="w-40 bg-gray-700 pl-3 rounded-md"></span>
+                    </h4>
+
+                    <h4 class="text-white  text-xl">Clothes: <span><input type="number" value="" id="cloth"
+                                class="w-40 bg-gray-700 pl-3 rounded-md"></span>
+                    </h4>
+                </div>
+            </article>
+
+            <button id="calculate-btn"
+                class="bg-teal-700 text-white text-lg block mx-auto mt-10 px-5 py-3 rounded-md hover:animate-pulse">Calculate</button>
+
+
+            <h4 class="text-2xl text-center text-emerald-500 font-medium mt-5">Total Expenses: <span
+                    id="expenses">0</span></h4>
+
+            <h4 class="text-2xl text-center text-emerald-500 font-medium mt-3">Balance: <span id="balance">0</span></h4>
+
+            <h4 class="text-white text-xl text-center my-5">Save: <span><input type="number" value="" id="percent"
+                        class="w-40 bg-gray-700 pl-3 rounded-md"></span> % <button id="save"
+                    class="bg-teal-700 px-7 py-2 rounded-lg hover:animate-pulse">Save</button>
+            </h4>
+
+            <h4 class="text-2xl text-center text-emerald-500 font-medium my-2">Saving Amount: <span
+                    id="saving-amount">0</span></h4>
+
+            <h4 class="text-2xl text-center text-emerald-500 font-medium">Remaining Balance: <span
+                    id="remaining">0</span></h4>
+        </section>
+
+    </main>
+
+    <canvas class="background bg-gray-900"></canvas>
+    <script src="path/to/particles.min.js"></script>
+</body>
+
+</html>
